@@ -12,7 +12,7 @@ public class Answer {
     // Attributes
     protected Question q; //reference to question being answered
     protected int scaleResponse;  //user enters selected response should be within q's range
-    protected String addtionalResponse; //user comments
+    protected String additionalResponse; //user comments
 
     /**
      * Convience constructor that provides some meaningful defaults
@@ -20,10 +20,15 @@ public class Answer {
     public Answer(Question q) {
         this.q = q;
         this.scaleResponse = scaleResponse;
-        this.addtionalResponse = addtionalResponse;
+        this.additionalResponse = additionalResponse;
 
     }
 
+    public Answer (Question q, int scaleResponse, String additionalResponse) {
+        this.q = q;
+        this.scaleResponse = scaleResponse;
+        this.additionalResponse = additionalResponse;
+    }
     /**
      * Retrieve the answer to the scale question from stdin ie the keyboard and
      * store that answer in the scaleResponse attribute.
@@ -44,7 +49,7 @@ public class Answer {
     }
 
     public void getSecondResponse(Scanner stdin) {
-        addtionalResponse = stdin.nextLine(); 
+        additionalResponse = stdin.nextLine(); 
     }
 
 
