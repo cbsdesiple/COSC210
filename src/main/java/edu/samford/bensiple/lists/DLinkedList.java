@@ -5,11 +5,14 @@
  */
 package edu.samford.bensiple.lists;
 
+import java.util.Iterator;
+import java.util.function.Consumer;
+
 /**
  *
  * @author desip
  */
-public class DLinkedList<T> {
+public class DLinkedList<T> implements Iterable<T>{
     
     private DNode<T> header;   // "special" node without data that marks beginning of list
     private DNode<T> trailer;  // "special" node without data that marks end of list
@@ -208,4 +211,8 @@ public class DLinkedList<T> {
         pos.setElement(e);
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return new DLinkedListIterator<>(this);
+    }
 }
