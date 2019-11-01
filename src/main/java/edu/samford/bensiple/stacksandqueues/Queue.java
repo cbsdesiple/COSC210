@@ -6,7 +6,7 @@
 package edu.samford.bensiple.stacksandqueues;
 
 /**
- *
+ * Interface for FIFO data structure.
  * @author desip
  */
 public interface Queue<T> {

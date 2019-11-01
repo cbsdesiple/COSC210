@@ -10,26 +10,22 @@ package edu.samford.bensiple.stacksandqueues;
  * @author desip
  */
 public class QueueDemo {
+
     public static void main(String[] args) {
-        Queue <Integer> nums = new ListQueue<>();
-        //The Queue is currently empty
-        nums.enqueue(1);
-        nums.enqueue(2);
-        nums.enqueue(3);
-        nums.enqueue(4);
-        nums.enqueue(5);
+        Queue<String> helpQueue = new ListQueue<>();
+        helpQueue.enqueue("Lauren");
+        helpQueue.enqueue("Ty");
+        System.out.println(helpQueue.dequeue());
+        System.out.println(helpQueue.size());
+        System.out.println(helpQueue.isEmpty());
+        helpQueue.enqueue("Will");
+        System.out.println(helpQueue.dequeue());
+        System.out.println(helpQueue.size());
+        System.out.println(helpQueue.isEmpty());
+        System.out.println(helpQueue.dequeue());
         
-        System.out.println("Front of Queue:" + nums.front());
-        System.out.println("Dequeue: " + nums.dequeue());
-        System.out.println("Front of Queue:" + nums.front());
-        System.out.println("Dequeue: " + nums.dequeue());
-        System.out.println("Front of Queue:" + nums.front());
-        System.out.println("Dequeue: " + nums.dequeue());
-        System.out.println("Front of Queue:" + nums.front());
-        System.out.println("Dequeue: " + nums.dequeue());
-        System.out.println("Front of Queue:" + nums.front());
-        System.out.println("Dequeue: " + nums.dequeue());
-        //This will throw and error
-        sSystem.out.println(nums.dequeue());
+        // This will crash the program
+        //System.out.println(helpQueue.dequeue());
+        
     }
 }

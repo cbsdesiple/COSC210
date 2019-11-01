@@ -51,5 +51,11 @@ public class ListQueue <T> implements Queue<T>{
     public boolean isEmpty() {
         return theQueue.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        String strval = theQueue.toString();
+        return strval;
+    }
     
 }
