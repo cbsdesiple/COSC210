@@ -12,7 +12,7 @@ import java.util.function.Consumer;
  *
  * @author desip
  */
-public class DLinkedListIterator<T> implements Iterator<T> {
+public class DLinkedListIterator<T extends Comparable> implements Iterator<T> {
 
     protected DLinkedList<T> theList;
     protected DNode<T> cur;
